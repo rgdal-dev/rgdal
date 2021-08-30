@@ -118,7 +118,7 @@ local_RGDAL_Init <- function() .Call('RGDAL_Init', PACKAGE="rgdal")
     spVcheck <- utils::packageVersion("sp") == splVersion
   if (!is.null(spVcheck) && !spVcheck) paste(Smess, 
     "sp version used to install rgdal and loaded sp version differ\n")
-  if (PROJis6ormore()) Smess <- paste(Smess, "To mute warnings of possible GDAL/OSR exportToProj4() degradation,\nuse options(\"rgdal_show_exportToProj4_warnings\"=\"none\") before loading rgdal.\n", sep="")
+  if (PROJis6ormore()) Smess <- paste(Smess, "To mute warnings of possible GDAL/OSR exportToProj4() degradation,\nuse options(\"rgdal_show_exportToProj4_warnings\"=\"none\") before loading sp or rgdal.\n", sep="")
   if (nzchar(get(".rgdal_set.PROJ_LIB", envir=.RGDAL_CACHE))) {
     Smess <- paste(Smess, "Overwritten PROJ_LIB was ",
       get(".rgdal_set.PROJ_LIB", envir=.RGDAL_CACHE), "\n", sep="")
