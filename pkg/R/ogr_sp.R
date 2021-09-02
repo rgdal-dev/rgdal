@@ -612,6 +612,7 @@ showSRID <- function(inSRID, format="WKT2", multiline="NO", enforce_xy=NULL, EPS
     if (substring(inSRID, 1, 2) == "BO") in_format = 3L
     if (substring(inSRID, 1, 1) == "S") in_format = 3L
     if (substring(inSRID, 1, 2) == "CO") in_format = 3L
+    if (substring(inSRID, 1, 3) == "ENG") in_format = 3L
     if (substring(inSRID, 1, 4) == "EPSG") in_format = 4L
     if (substring(inSRID, 1, 4) == "ESRI") in_format = 5L
     if (substring(inSRID, 1, 3) == "OGC") in_format = 5L
@@ -623,7 +624,7 @@ showSRID <- function(inSRID, format="WKT2", multiline="NO", enforce_xy=NULL, EPS
     } else {
         prefer_proj <- get_prefer_proj()
     }
-    if (in_format == 4L) {
+    if (!is.na(in_format) && in_format == 4L) {
         if (EPSG_to_init && !prefer_proj) {
             in_format = 1L
             inSRID <- paste0("+init=epsg:", substring(inSRID, 6, nchar(inSRID)))
