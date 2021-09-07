@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rgdal</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-25</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -198,7 +198,7 @@
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Working out which combination of dsn, layer, and driver (and option) values give the desired output takes time and care, and is constrained by the ability of drivers to write output; many are read-only. Use of the references given is highly advisable, with searches in the archives of other software using GDAL/OGR. Note that for the &#8220;ESRI Shapefile&#8221; driver and GDAL &gt;= 1.9, the <code>layer_options</code> value of &#8216;ENCODING=&#8220;LDID/CP1252&#8221;&#8217; or other values found on <a href='http://www.autopark.ru/ASBProgrammerGuide/DBFSTRUC.HTM'>http://www.autopark.ru/ASBProgrammerGuide/DBFSTRUC.HTM</a> to set the encoding byte of the output DBF file (link refered to in ogr/ogrsf_frmts/shape/ogrshapelayer.cpp. The effect of setting the LDID may vary depending on whether GDAL is built with iconv or not, and on the setting of the CPL Option &#8220;SHAPE_ENCODING&#8221;.</p>
+    <p>Working out which combination of dsn, layer, and driver (and option) values give the desired output takes time and care, and is constrained by the ability of drivers to write output; many are read-only. Use of the references given is highly advisable, with searches in the archives of other software using GDAL/OGR. Note that for the &#8220;ESRI Shapefile&#8221; driver and GDAL &gt;= 1.9, the <code>layer_options</code> value of &#8216;ENCODING=&#8220;LDID/CP1252&#8221;&#8217; or other values found on <a href='http://www.autopark.ru/ASBProgrammerGuide/dbfstruc.htm'>http://www.autopark.ru/ASBProgrammerGuide/dbfstruc.htm</a> to set the encoding byte of the output DBF file (link refered to in ogr/ogrsf_frmts/shape/ogrshapelayer.cpp. The effect of setting the LDID may vary depending on whether GDAL is built with iconv or not, and on the setting of the CPL Option &#8220;SHAPE_ENCODING&#8221;.</p>
 <p>While there is no certainty, newer drivers such as KML, GML, SQLite and Geopackage (GPKG) may encode string fields as UTF-8. Users are advised to explore this on a case to case basis using <code><a href='https://rdrr.io/r/base/Encoding.html'>Encoding</a></code> on string fields of objects to be output, converting where necessary with <code><a href='https://rdrr.io/r/base/iconv.html'>iconv</a></code> or assigning the appropriate value with <code><a href='https://rdrr.io/r/base/Encoding.html'>Encoding</a></code>.</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
@@ -227,7 +227,7 @@
     <pre class="examples"><div class='input'><span class='fu'><a href='showWKT.html'>set_thin_PROJ6_warnings</a></span><span class='op'>(</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>cities</span> <span class='op'>&lt;-</span> <span class='fu'><a href='readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"vectors"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"cities"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/vectors", layer: "cities"
+#&gt; Source: "/tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/vectors", layer: "cities"
 #&gt; with 606 features
 #&gt; It has 4 fields
 #&gt; Integer64 fields read as strings:  POPULATION </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>cities</span><span class='op'>$</span><span class='va'>POPULATION</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>cities</span><span class='op'>$</span><span class='va'>POPULATION</span> <span class='op'>==</span> <span class='op'>-</span><span class='fl'>99</span>
@@ -246,7 +246,7 @@
 #&gt;   layer exists, use a new layer name</div><div class='input'><span class='fu'>writeOGR</span><span class='op'>(</span><span class='va'>cities</span>, <span class='va'>td</span>, <span class='st'>"cities"</span>, driver<span class='op'>=</span><span class='st'>"ESRI Shapefile"</span>, overwrite_layer<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>cities2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='va'>td</span>, <span class='st'>"cities"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/tmp/RtmpxH0AFG/rgdal_examples", layer: "cities"
+#&gt; Source: "/tmp/RtmpU1WIbP/rgdal_examples", layer: "cities"
 #&gt; with 606 features
 #&gt; It has 4 fields</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>cities2</span><span class='op'>$</span><span class='va'>POPULATION</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Length     Class      Mode 
@@ -283,7 +283,7 @@
 #&gt; It has 0 fields
 #&gt; [1] "0 0"
 #&gt; OGR data source with driver: GeoJSON 
-#&gt; Source: "/tmp/RtmpxH0AFG/file572fd4f9ec007", layer: "GeoJSON"
+#&gt; Source: "/tmp/RtmpU1WIbP/filefad193cb42051", layer: "GeoJSON"
 #&gt; with 1 features
 #&gt; It has 1 fields
 #&gt; [1] "0 0"
@@ -307,7 +307,7 @@
 </div><div class='output co'>#&gt; [1] "cities.dbf" "cities.prj" "cities.shp" "cities.shx" "meuse.kml" </div><div class='input'><span class='va'>roads</span> <span class='op'>&lt;-</span> <span class='fu'><a href='readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"vectors"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,
  <span class='st'>"kiritimati_primary_roads"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/vectors", layer: "kiritimati_primary_roads"
+#&gt; Source: "/tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/vectors", layer: "kiritimati_primary_roads"
 #&gt; with 35 features
 #&gt; It has 1 fields</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>roads</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialLinesDataFrame
@@ -333,7 +333,7 @@
 <span class='op'>}</span>
 <span class='va'>scot_BNG</span> <span class='op'>&lt;-</span> <span class='fu'><a href='readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"vectors"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"scot_BNG"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/vectors", layer: "scot_BNG"
+#&gt; Source: "/tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/vectors", layer: "scot_BNG"
 #&gt; with 56 features
 #&gt; It has 13 fields</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>scot_BNG</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialPolygonsDataFrame
@@ -387,7 +387,7 @@
 </div><div class='output co'>#&gt; [1] "cities.dbf"   "cities.prj"   "cities.shp"   "cities.shx"   "meuse.kml"   
 #&gt; [6] "scot_BNG.mid" "scot_BNG.mif"</div><div class='input'><span class='va'>scot_BNG3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>td</span>, <span class='st'>"scot_BNG.mif"</span>, sep<span class='op'>=</span><span class='st'>"/"</span><span class='op'>)</span>, <span class='st'>"scot_BNG"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; OGR data source with driver: MapInfo File 
-#&gt; Source: "/tmp/RtmpxH0AFG/rgdal_examples/scot_BNG.mif", layer: "scot_BNG"
+#&gt; Source: "/tmp/RtmpU1WIbP/rgdal_examples/scot_BNG.mif", layer: "scot_BNG"
 #&gt; with 56 features
 #&gt; It has 13 fields</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>scot_BNG3</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialPolygonsDataFrame
@@ -398,7 +398,7 @@
 #&gt; Is projected: TRUE 
 #&gt; proj4string :
 #&gt; [+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000
-#&gt; +y_0=-100000 +ellps=airy +units=m +no_defs]
+#&gt; +y_0=-100000 +datum=WGS84 +units=m +no_defs]
 #&gt; Data attributes:
 #&gt;     SP_ID               NAME                ID_x           COUNT       
 #&gt;  Length:56          Length:56          Min.   : 1.00   Min.   : 0.000  

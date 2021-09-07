@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rgdal</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-25</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -203,12 +203,12 @@
  inv<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>res1</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>state.center</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>state.center</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;        V1                   V2            
-#&gt;  Min.   :-1.421e-14   Min.   :-1.283e-11  
-#&gt;  1st Qu.: 0.000e+00   1st Qu.:-3.126e-13  
-#&gt;  Median : 0.000e+00   Median :-2.025e-13  
-#&gt;  Mean   :-1.705e-15   Mean   :-4.767e-13  
-#&gt;  3rd Qu.: 0.000e+00   3rd Qu.:-1.155e-13  
-#&gt;  Max.   : 0.000e+00   Max.   :-4.263e-14  </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>state.center</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>state.center</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>, asp<span class='op'>=</span><span class='fl'>1</span>, type<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
+#&gt;  Min.   :-1.421e-14   Min.   :-3.553e-14  
+#&gt;  1st Qu.: 0.000e+00   1st Qu.:-1.421e-14  
+#&gt;  Median : 0.000e+00   Median : 0.000e+00  
+#&gt;  Mean   :-1.421e-15   Mean   :-3.553e-15  
+#&gt;  3rd Qu.: 0.000e+00   3rd Qu.: 2.665e-15  
+#&gt;  Max.   : 0.000e+00   Max.   : 2.842e-14  </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>state.center</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>state.center</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>, asp<span class='op'>=</span><span class='fl'>1</span>, type<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/sp/man/gridlines.html'>text</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>state.center</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>state.center</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>, <span class='va'>state.abb</span><span class='op'>)</span>
 </div><div class='img'><img src='project-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>res</span>, asp<span class='op'>=</span><span class='fl'>1</span>, type<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/sp/man/gridlines.html'>text</a></span><span class='op'>(</span><span class='va'>res</span>, <span class='va'>state.abb</span><span class='op'>)</span>
@@ -231,9 +231,9 @@
 </div><div class='output co'>#&gt;      [,1]  [,2]
 #&gt; [1,] 9.05 48.52</div><div class='input'><span class='co'>#</span>
 <span class='fu'><a href='projInfo.html'>getPROJ4VersionInfo</a></span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "Rel. 7.2.0, November 1st, 2020, [PJ_VERSION: 720]"
+</div><div class='output co'>#&gt; [1] "Rel. 8.1.1, September 1st, 2021, [PJ_VERSION: 811]"
 #&gt; attr(,"short")
-#&gt; [1] 720</div><div class='input'><span class='co'># Test for UTM == TMERC (&lt;= 4.9.2) or UTM == ETMERC (&gt; 4.9.2)</span>
+#&gt; [1] 811</div><div class='input'><span class='co'># Test for UTM == TMERC (&lt;= 4.9.2) or UTM == ETMERC (&gt; 4.9.2)</span>
 <span class='va'>nhh</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5.304234</span>, <span class='fl'>60.422311</span><span class='op'>)</span>, ncol<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
 <span class='va'>nhh_utm_32N_P4</span> <span class='op'>&lt;-</span> <span class='fu'>project</span><span class='op'>(</span><span class='va'>nhh</span>, <span class='st'>"+init=epsg:3044"</span><span class='op'>)</span>
 <span class='va'>nhh_tmerc_P4</span> <span class='op'>&lt;-</span> <span class='fu'>project</span><span class='op'>(</span><span class='va'>nhh</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"+proj=tmerc +k=0.9996 +lon_0=9"</span>,
@@ -254,12 +254,12 @@
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='co'># UTM == TMERC: PROJ4 &lt;=4.9.2</span>
 <span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>unis_utm_33N_P4</span>, <span class='va'>unis_etmerc_P4</span>, tolerance<span class='op'>=</span><span class='fl'>1e-9</span>, scale<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='co'># UTM == ETMERC: PROJ4 &gt; 4.9.2</span>
+<span class='co'>#pv &lt;- attr(getPROJ4VersionInfo(), "short")</span>
+<span class='co'>#if (pv &lt; 500) {  </span>
+<span class='co'># valgrind leakages in some cases for PROJ &gt;= 5; many non-projection proj values added</span>
 <span class='co'># available projections and their inverses if provided</span>
 <span class='co'># For &gt;=4.9.3 returns non-finite points rather than needing crash protection</span>
-<span class='fu'><a href='projInfo.html'>getPROJ4VersionInfo</a></span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "Rel. 7.2.0, November 1st, 2020, [PJ_VERSION: 720]"
-#&gt; attr(,"short")
-#&gt; [1] 720</div><div class='input'><span class='va'>projs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='fu'><a href='projInfo.html'>projInfo</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>name</span><span class='op'>)</span>
+<span class='va'>projs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='fu'><a href='projInfo.html'>projInfo</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>$</span><span class='va'>name</span><span class='op'>)</span>
 <span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/logical.html'>logical</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>projs</span><span class='op'>)</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>projs</span>
 <span class='va'>msgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>projs</span><span class='op'>)</span><span class='op'>)</span>
@@ -268,16 +268,21 @@
 <span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>warn<span class='op'>=</span><span class='fl'>2L</span><span class='op'>)</span>
 <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span>along<span class='op'>=</span><span class='va'>res</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
   <span class='va'>iprs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"+proj="</span>, <span class='va'>projs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
-  <span class='va'>xy</span> <span class='op'>&lt;-</span> <span class='kw'><a href='https://rdrr.io/r/base/try.html'>try</a></span><span class='op'>(</span><span class='fu'>project</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0</span><span class='op'>)</span>, <span class='va'>iprs</span>, legacy<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>, silent<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+  <span class='va'>xy</span> <span class='op'>&lt;-</span> <span class='kw'><a href='https://rdrr.io/r/base/try.html'>try</a></span><span class='op'>(</span><span class='fu'>project</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0</span><span class='op'>)</span>, <span class='va'>iprs</span>, legacy<span class='op'>=</span><span class='cn'>TRUE</span>, use_aoi<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>, silent<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
   <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>inherits</a></span><span class='op'>(</span><span class='va'>xy</span>, <span class='st'>"try-error"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
     <span class='va'>res</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
     <span class='va'>msgs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"fwd:"</span>, <span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='va'>xy</span>, <span class='st'>"\n"</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+  <span class='op'>}</span> <span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/any.html'>any</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>abs</a></span><span class='op'>(</span><span class='va'>xy</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='fl'>1e+08</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>res</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
+    <span class='va'>msgs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"fwd: huge value"</span><span class='op'>)</span>
   <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span>
-    <span class='va'>out</span> <span class='op'>&lt;-</span> <span class='kw'><a href='https://rdrr.io/r/base/try.html'>try</a></span><span class='op'>(</span><span class='fu'>project</span><span class='op'>(</span><span class='va'>xy</span>, <span class='va'>iprs</span>, inv<span class='op'>=</span><span class='cn'>TRUE</span>, legacy<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>, silent<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+    <span class='va'>out</span> <span class='op'>&lt;-</span> <span class='kw'><a href='https://rdrr.io/r/base/try.html'>try</a></span><span class='op'>(</span><span class='fu'>project</span><span class='op'>(</span><span class='va'>xy</span>, <span class='va'>iprs</span>, inv<span class='op'>=</span><span class='cn'>TRUE</span>, legacy<span class='op'>=</span><span class='cn'>TRUE</span>, use_aoi<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>, silent<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
     <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>inherits</a></span><span class='op'>(</span><span class='va'>out</span>, <span class='st'>"try-error"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
       <span class='va'>res</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
       <span class='va'>msgs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"inv:"</span>, <span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='va'>out</span>, <span class='st'>"\n"</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
-    <span class='op'>}</span> <span class='kw'>else</span> <span class='va'>res</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Logic.html'>isTRUE</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>, <span class='va'>out</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span>
+      <span class='va'>res</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Logic.html'>isTRUE</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>, <span class='va'>out</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='op'>}</span>
   <span class='op'>}</span>
 <span class='op'>}</span>
 <span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>warn<span class='op'>=</span><span class='va'>owarn</span><span class='op'>)</span>
@@ -344,11 +349,13 @@
 #&gt; tcc           NA
 #&gt; tinshift      NA
 #&gt; tissot        NA
+#&gt; topocentric   NA
 #&gt; tpeqd         NA
 #&gt; tpers         NA
 #&gt; unitconvert   NA
 #&gt; urm5          NA
 #&gt; urmfps        NA
+#&gt; utm           NA
 #&gt; vandg2        NA
 #&gt; vandg3        NA
 #&gt; vandg4        NA
@@ -356,76 +363,78 @@
 #&gt; vgridshift    NA
 #&gt; wag7          NA
 #&gt; xyzgridshift  NA
-#&gt;                                                                                    msgs
-#&gt; adams_hemi              inv:   coordinate operation creation failed: malformed pipeline
-#&gt; adams_ws1               inv:   coordinate operation creation failed: malformed pipeline
-#&gt; aea                             fwd:   target crs creation failed: conic lat_1 = -lat_2
-#&gt; airy                    inv:   coordinate operation creation failed: malformed pipeline
-#&gt; alsk                    inv:   (converted from warning) 1 projected point(s) not finite
-#&gt; apian                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; august                  inv:   coordinate operation creation failed: malformed pipeline
-#&gt; axisswap        fwd:   target crs creation failed: illegal axis orientation combination
-#&gt; bacon                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; bertin1953              inv:   coordinate operation creation failed: malformed pipeline
-#&gt; boggs                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; bonne                                      fwd:   target crs creation failed: lat_1 = 0
-#&gt; ccon                                       fwd:   target crs creation failed: lat_1 = 0
-#&gt; chamb             fwd:   target crs creation failed: no distance between control points
-#&gt; defmodel         fwd:   target crs creation failed: no arguments in initialization list
-#&gt; deformation      fwd:   target crs creation failed: no arguments in initialization list
-#&gt; denoy                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; eqdc                            fwd:   target crs creation failed: conic lat_1 = -lat_2
-#&gt; euler                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; geoc                 fwd:   source crs creation failed: generic error of unknown origin
-#&gt; geos                          fwd:   target crs creation failed: h &lt;= 0 or h &gt; 1e10 * a
-#&gt; gins8                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; gn_sinu            fwd:   target crs creation failed: both n &amp; m must be spec'd and &gt; 0
-#&gt; gs50                    inv:   (converted from warning) 1 projected point(s) not finite
-#&gt; guyou                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; helmert              fwd:   source crs creation failed: generic error of unknown origin
-#&gt; hgridshift       fwd:   target crs creation failed: no arguments in initialization list
-#&gt; horner                    fwd:   target crs creation failed: missing required arguments
-#&gt; imw_p                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; isea                    inv:   coordinate operation creation failed: malformed pipeline
-#&gt; labrd                                      fwd:   target crs creation failed: lat_0 = 0
-#&gt; larr                    inv:   coordinate operation creation failed: malformed pipeline
-#&gt; lask                    inv:   coordinate operation creation failed: malformed pipeline
-#&gt; lcc                             fwd:   target crs creation failed: conic lat_1 = -lat_2
-#&gt; lcca                                       fwd:   target crs creation failed: lat_0 = 0
-#&gt; lsat                           fwd:   target crs creation failed: lsat not in 1-5 range
-#&gt; misrsom                            fwd:   target crs creation failed: path not in range
-#&gt; molobadekas               fwd:   target crs creation failed: missing required arguments
-#&gt; molodensky       fwd:   target crs creation failed: no arguments in initialization list
-#&gt; murd1                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; murd2                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; murd3                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; nicol                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; nsper                         fwd:   target crs creation failed: h &lt;= 0 or h &gt; 1e10 * a
-#&gt; nzmg                    inv:   (converted from warning) 1 projected point(s) not finite
-#&gt; ob_tran        fwd:   target crs creation failed: projection not selected to be rotated
-#&gt; oea                fwd:   target crs creation failed: both n &amp; m must be spec'd and &gt; 0
-#&gt; omerc                  fwd:   target crs creation failed: lat_0 = 0 or 90 or alpha = 90
-#&gt; ortel                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; pconic                  fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; peirce_q                inv:   coordinate operation creation failed: malformed pipeline
-#&gt; pipeline                          fwd:   target crs creation failed: malformed pipeline
-#&gt; rpoly                   inv:   coordinate operation creation failed: malformed pipeline
-#&gt; sch          fwd:   target crs creation failed: failed to find projection to be rotated
-#&gt; tcc                     inv:   coordinate operation creation failed: malformed pipeline
-#&gt; tinshift         fwd:   target crs creation failed: no arguments in initialization list
-#&gt; tissot                  fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; tpeqd             fwd:   target crs creation failed: no distance between control points
-#&gt; tpers                         fwd:   target crs creation failed: h &lt;= 0 or h &gt; 1e10 * a
-#&gt; unitconvert          fwd:   source crs creation failed: generic error of unknown origin
-#&gt; urm5                  fwd:   target crs creation failed: n &lt;= 0, n &gt; 1 or not specified
-#&gt; urmfps                fwd:   target crs creation failed: n &lt;= 0, n &gt; 1 or not specified
-#&gt; vandg2                  inv:   coordinate operation creation failed: malformed pipeline
-#&gt; vandg3                  inv:   coordinate operation creation failed: malformed pipeline
-#&gt; vandg4                  inv:   coordinate operation creation failed: malformed pipeline
-#&gt; vitk1                   fwd:   target crs creation failed: lat_1 or lat_2 not specified
-#&gt; vgridshift       fwd:   target crs creation failed: no arguments in initialization list
-#&gt; wag7                    inv:   coordinate operation creation failed: malformed pipeline
-#&gt; xyzgridshift     fwd:   target crs creation failed: no arguments in initialization list</div><div class='input'><span class='co'># inverse not equal to input</span>
+#&gt;                                                                          msgs
+#&gt; adams_hemi                                    inv:   malformed pipeline found
+#&gt; adams_ws1                                     inv:   malformed pipeline found
+#&gt; aea          fwd:   target crs creation failed: Invalid value for an argument
+#&gt; airy                                          inv:   malformed pipeline found
+#&gt; alsk                                                          fwd: huge value
+#&gt; apian                                         inv:   malformed pipeline found
+#&gt; august                                        inv:   malformed pipeline found
+#&gt; axisswap      fwd:   target crs creation failed: Mutually exclusive arguments
+#&gt; bacon                                         inv:   malformed pipeline found
+#&gt; bertin1953                                    inv:   malformed pipeline found
+#&gt; boggs                                         inv:   malformed pipeline found
+#&gt; bonne        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; ccon         fwd:   target crs creation failed: Invalid value for an argument
+#&gt; chamb        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; defmodel                  fwd:   target crs creation failed: Missing argument
+#&gt; deformation               fwd:   target crs creation failed: Missing argument
+#&gt; denoy                                         inv:   malformed pipeline found
+#&gt; eqdc         fwd:   target crs creation failed: Invalid value for an argument
+#&gt; euler        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; geoc             fwd:   source crs creation failed: Unknown error (code 4096)
+#&gt; geos         fwd:   target crs creation failed: Invalid value for an argument
+#&gt; gins8                                         inv:   malformed pipeline found
+#&gt; gn_sinu                   fwd:   target crs creation failed: Missing argument
+#&gt; gs50                                                          fwd: huge value
+#&gt; guyou                                         inv:   malformed pipeline found
+#&gt; helmert          fwd:   source crs creation failed: Unknown error (code 4096)
+#&gt; hgridshift                fwd:   target crs creation failed: Missing argument
+#&gt; horner                    fwd:   target crs creation failed: Missing argument
+#&gt; imw_p        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; isea                                          inv:   malformed pipeline found
+#&gt; labrd        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; larr                                          inv:   malformed pipeline found
+#&gt; lask                                          inv:   malformed pipeline found
+#&gt; lcc          fwd:   target crs creation failed: Invalid value for an argument
+#&gt; lcca         fwd:   target crs creation failed: Invalid value for an argument
+#&gt; lsat         fwd:   target crs creation failed: Invalid value for an argument
+#&gt; misrsom      fwd:   target crs creation failed: Invalid value for an argument
+#&gt; molobadekas               fwd:   target crs creation failed: Missing argument
+#&gt; molodensky                fwd:   target crs creation failed: Missing argument
+#&gt; murd1        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; murd2        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; murd3        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; nicol                                         inv:   malformed pipeline found
+#&gt; nsper        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; nzmg                                                          fwd: huge value
+#&gt; ob_tran                   fwd:   target crs creation failed: Missing argument
+#&gt; oea          fwd:   target crs creation failed: Invalid value for an argument
+#&gt; omerc        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; ortel                                         inv:   malformed pipeline found
+#&gt; pconic       fwd:   target crs creation failed: Invalid value for an argument
+#&gt; peirce_q                                      inv:   malformed pipeline found
+#&gt; pipeline        fwd:   target crs creation failed: Invalid PROJ string syntax
+#&gt; rpoly                                         inv:   malformed pipeline found
+#&gt; sch                       fwd:   target crs creation failed: Missing argument
+#&gt; tcc                                           inv:   malformed pipeline found
+#&gt; tinshift                  fwd:   target crs creation failed: Missing argument
+#&gt; tissot       fwd:   target crs creation failed: Invalid value for an argument
+#&gt; topocentric               fwd:   target crs creation failed: Missing argument
+#&gt; tpeqd        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; tpers        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; unitconvert      fwd:   source crs creation failed: Unknown error (code 4096)
+#&gt; urm5                      fwd:   target crs creation failed: Missing argument
+#&gt; urmfps                    fwd:   target crs creation failed: Missing argument
+#&gt; utm              fwd:   target crs creation failed: Unknown error (code 4096)
+#&gt; vandg2                                        inv:   malformed pipeline found
+#&gt; vandg3                                        inv:   malformed pipeline found
+#&gt; vandg4                                        inv:   malformed pipeline found
+#&gt; vitk1        fwd:   target crs creation failed: Invalid value for an argument
+#&gt; vgridshift                fwd:   target crs creation failed: Missing argument
+#&gt; wag7                                          inv:   malformed pipeline found
+#&gt; xyzgridshift              fwd:   target crs creation failed: Missing argument</div><div class='input'><span class='co'># inverse not equal to input</span>
 <span class='co'># (see http://lists.maptools.org/pipermail/proj/2011-November/006015.html)</span>
 <span class='va'>df</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>df</span><span class='op'>$</span><span class='va'>res</span><span class='op'>)</span> <span class='op'>&amp;</span> <span class='op'>!</span><span class='va'>df</span><span class='op'>$</span><span class='va'>res</span>,<span class='op'>]</span>
 </div><div class='output co'>#&gt;          res msgs
@@ -434,25 +443,26 @@
 <span class='fu'><a href='https://rdrr.io/r/base/row.names.html'>row.names</a></span><span class='op'>(</span><span class='va'>df</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>df</span><span class='op'>$</span><span class='va'>res</span><span class='op'>)</span> <span class='op'>&amp;</span> <span class='va'>df</span><span class='op'>$</span><span class='va'>res</span>,<span class='op'>]</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   [1] "adams_ws2"  "aeqd"       "affine"     "aitoff"     "bipc"      
 #&gt;   [6] "calcofi"    "cart"       "cass"       "cc"         "cea"       
-#&gt;  [11] "collg"      "comill"     "crast"      "eck1"       "eck2"      
-#&gt;  [16] "eck3"       "eck4"       "eck5"       "eck6"       "eqearth"   
-#&gt;  [21] "eqc"        "etmerc"     "fahey"      "fouc"       "fouc_s"    
-#&gt;  [26] "gall"       "geogoffset" "gnom"       "goode"      "hammer"    
-#&gt;  [31] "hatano"     "healpix"    "rhealpix"   "igh"        "igh_o"     
-#&gt;  [36] "kav5"       "kav7"       "krovak"     "laea"       "lagrng"    
-#&gt;  [41] "lonlat"     "latlon"     "leac"       "loxim"      "mbt_s"     
-#&gt;  [46] "mbt_fps"    "mbtfpp"     "mbtfpq"     "mbtfps"     "merc"      
-#&gt;  [51] "mil_os"     "mill"       "moll"       "natearth"   "natearth2" 
-#&gt;  [56] "nell"       "nell_h"     "noop"       "ocea"       "ortho"     
-#&gt;  [61] "patterson"  "poly"       "pop"        "push"       "putp1"     
-#&gt;  [66] "putp2"      "putp3"      "putp3p"     "putp4p"     "putp5"     
-#&gt;  [71] "putp5p"     "putp6"      "putp6p"     "qua_aut"    "qsc"       
-#&gt;  [76] "robin"      "rouss"      "set"        "sinu"       "somerc"    
-#&gt;  [81] "stere"      "sterea"     "gstmerc"    "tcea"       "times"     
-#&gt;  [86] "tmerc"      "tobmerc"    "ups"        "utm"        "vandg"     
+#&gt;  [11] "collg"      "col_urban"  "comill"     "crast"      "eck1"      
+#&gt;  [16] "eck2"       "eck3"       "eck4"       "eck5"       "eck6"      
+#&gt;  [21] "eqearth"    "eqc"        "etmerc"     "fahey"      "fouc"      
+#&gt;  [26] "fouc_s"     "gall"       "geogoffset" "gnom"       "goode"     
+#&gt;  [31] "hammer"     "hatano"     "healpix"    "rhealpix"   "igh"       
+#&gt;  [36] "igh_o"      "kav5"       "kav7"       "krovak"     "laea"      
+#&gt;  [41] "lagrng"     "lonlat"     "latlon"     "leac"       "loxim"     
+#&gt;  [46] "mbt_s"      "mbt_fps"    "mbtfpp"     "mbtfpq"     "mbtfps"    
+#&gt;  [51] "merc"       "mil_os"     "mill"       "moll"       "natearth"  
+#&gt;  [56] "natearth2"  "nell"       "nell_h"     "noop"       "ocea"      
+#&gt;  [61] "ortho"      "patterson"  "poly"       "pop"        "push"      
+#&gt;  [66] "putp1"      "putp2"      "putp3"      "putp3p"     "putp4p"    
+#&gt;  [71] "putp5"      "putp5p"     "putp6"      "putp6p"     "qua_aut"   
+#&gt;  [76] "qsc"        "robin"      "rouss"      "set"        "sinu"      
+#&gt;  [81] "somerc"     "stere"      "sterea"     "gstmerc"    "tcea"      
+#&gt;  [86] "times"      "tmerc"      "tobmerc"    "ups"        "vandg"     
 #&gt;  [91] "wag1"       "wag2"       "wag3"       "wag4"       "wag5"      
 #&gt;  [96] "wag6"       "webmerc"    "weren"      "wink1"      "wink2"     
-#&gt; [101] "wintri"    </div><div class='input'><span class='co'># oce data representation with NAs</span>
+#&gt; [101] "wintri"    </div><div class='input'><span class='co'>#}</span>
+<span class='co'># oce data representation with NAs</span>
 <span class='va'>ll</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/structure.html'>structure</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12.1823368669203</span>, <span class='fl'>11.9149630062421</span>, <span class='fl'>12.3186076188739</span>, 
 <span class='fl'>12.6207597184845</span>, <span class='fl'>12.9955172054652</span>, <span class='fl'>12.6316117692658</span>, <span class='fl'>12.4680041846297</span>, 
 <span class='fl'>12.4366882666609</span>, <span class='cn'>NA</span>, <span class='cn'>NA</span>, <span class='op'>-</span><span class='fl'>5.78993051516384</span>, <span class='op'>-</span><span class='fl'>5.03798674888479</span>, 

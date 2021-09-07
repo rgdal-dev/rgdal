@@ -77,7 +77,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rgdal</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-25</span>
       </span>
     </div>
 
@@ -85,7 +85,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -187,13 +187,13 @@ Class <code>"GDALMajorObject"</code>, by class "GDALDataset".</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "downlit"             "file572fd89e705c.so"</div><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>new</span><span class='op'>(</span><span class='st'>'GDALTransientDataset'</span>, driver<span class='op'>=</span><span class='fu'>new</span><span class='op'>(</span><span class='st'>'GDALDriver'</span>, <span class='st'>"GTiff"</span><span class='op'>)</span>, rows<span class='op'>=</span><span class='fl'>100</span>,
+</div><div class='output co'>#&gt; [1] "downlit"</div><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>new</span><span class='op'>(</span><span class='st'>'GDALTransientDataset'</span>, driver<span class='op'>=</span><span class='fu'>new</span><span class='op'>(</span><span class='st'>'GDALDriver'</span>, <span class='st'>"GTiff"</span><span class='op'>)</span>, rows<span class='op'>=</span><span class='fl'>100</span>,
  cols<span class='op'>=</span><span class='fl'>100</span>, bands<span class='op'>=</span><span class='fl'>3</span>, type<span class='op'>=</span><span class='st'>'Byte'</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 100 100   3</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "downlit"             "file572fd1784021b"   "file572fd89e705c.so"</div><div class='input'><span class='fu'><a href='GDALReadOnlyDataset-class.html'>GDAL.close</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "downlit"           "filefad194969994c"</div><div class='input'><span class='fu'><a href='GDALReadOnlyDataset-class.html'>GDAL.close</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "downlit"             "file572fd89e705c.so"</div></pre>
+</div><div class='output co'>#&gt; [1] "downlit"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

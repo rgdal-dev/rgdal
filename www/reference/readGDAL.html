@@ -77,7 +77,7 @@ than creation." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rgdal</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5-25</span>
       </span>
     </div>
 
@@ -85,7 +85,7 @@ than creation." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -444,7 +444,7 @@ use <code>flip</code>.</p>
 #&gt;  3rd Qu.: 7.75  
 #&gt;  Max.   :10.00  
 #&gt;  NA's   :2      </div><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/big_int_arc_file.asc"</span>, package<span class='op'>=</span><span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/big_int_arc_file.asc has GDAL driver AAIGrid 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/big_int_arc_file.asc has GDAL driver AAIGrid 
 #&gt; and has 7 rows and 7 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -467,7 +467,7 @@ use <code>flip</code>.</p>
 #&gt;  Max.   :77594  </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"if the range is not 10000, 77590, your GDAL does not detect big\n"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; if the range is not 10000, 77590, your GDAL does not detect big</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"integers for this driver\n"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; integers for this driver</div><div class='input'><span class='va'>y</span> <span class='op'>=</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/Rlogo.jpg"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, band<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/Rlogo.jpg has GDAL driver JPEG 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/Rlogo.jpg has GDAL driver JPEG 
 #&gt; and has 175 rows and 200 columns</div><div class='output co'>#&gt; <span class='warning'>Warning: GeoTransform values not available</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -488,7 +488,7 @@ use <code>flip</code>.</p>
 #&gt;  Mean   :192.4  
 #&gt;  3rd Qu.:255.0  
 #&gt;  Max.   :255.0  </div><div class='input'><span class='va'>y</span> <span class='op'>=</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/Rlogo.jpg"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/Rlogo.jpg has GDAL driver JPEG 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/Rlogo.jpg has GDAL driver JPEG 
 #&gt; and has 175 rows and 200 columns</div><div class='output co'>#&gt; <span class='warning'>Warning: GeoTransform values not available</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -530,7 +530,7 @@ use <code>flip</code>.</p>
 #&gt; driver      GTiff 
 #&gt; projection  +proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889
 #&gt; +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs 
-#&gt; file        /tmp/RtmpxH0AFG/file572fd4df136dd 
+#&gt; file        /tmp/RtmpU1WIbP/filefad193f6b8523 
 #&gt; apparent band summary:
 #&gt;    GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1 Float32          FALSE           0         26         78
@@ -553,7 +553,7 @@ use <code>flip</code>.</p>
 #&gt; driver      GTiff 
 #&gt; projection  +proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889
 #&gt; +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs 
-#&gt; file        /tmp/RtmpxH0AFG/file572fd4df136dd 
+#&gt; file        /tmp/RtmpU1WIbP/filefad193f6b8523 
 #&gt; apparent band summary:
 #&gt;    GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1 Float32          FALSE           0         26         78
@@ -562,11 +562,12 @@ use <code>flip</code>.</p>
 #&gt; 1    0 0.992607 0.2971195 0.218151
 #&gt; Metadata:
 #&gt; AREA_OR_POINT=Area </div><div class='input'><span class='va'>mg2</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>fn</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd4df136dd has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad193f6b8523 has GDAL driver GTiff 
 #&gt; and has 104 rows and 78 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/sp/man/is.projected.html'>proj4string</a></span><span class='op'>(</span><span class='va'>mg2</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: CRS object has comment, which is lost in output</span></div><div class='output co'>#&gt; [1] "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs"</div><div class='input'><span class='va'>SP27GTIF</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/SP27GTIF.TIF"</span>, 
+</div><div class='output co'>#&gt; <span class='warning'>Warning: CRS object has comment, which is lost in output; in tests, see</span>
+#&gt; <span class='warning'>https://cran.r-project.org/web/packages/sp/vignettes/CRS_warnings.html</span></div><div class='output co'>#&gt; [1] "+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs"</div><div class='input'><span class='va'>SP27GTIF</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/SP27GTIF.TIF"</span>, 
 package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/SP27GTIF.TIF has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/SP27GTIF.TIF has GDAL driver GTiff 
 #&gt; and has 929 rows and 699 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>SP27GTIF</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -590,11 +591,51 @@ package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op
 #&gt;  Mean   :114.1  
 #&gt;  3rd Qu.:148.0  
 #&gt;  Max.   :255.0  </div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>SP27GTIF</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=tmerc +lat_0=36.6666666666667 +lon_0=-88.3333333333333
 #&gt; +k=0.999975 +x_0=152400.30480061 +y_0=0 +datum=NAD27 +units=us-ft
-#&gt; +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>SP27GTIF</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD27 / Illinois East\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",36.6666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-88.3333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.999975,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219]],\n    ID[\"EPSG\",26771]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>SP27GTIF</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>99</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+#&gt; +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["NAD27 / Illinois East",
+#&gt;     BASEGEOGCRS["NAD27",
+#&gt;         DATUM["North American Datum 1927",
+#&gt;             ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4267]],
+#&gt;     CONVERSION["Illinois CS27 East zone",
+#&gt;         METHOD["Transverse Mercator",
+#&gt;             ID["EPSG",9807]],
+#&gt;         PARAMETER["Latitude of natural origin",36.6666666666667,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8801]],
+#&gt;         PARAMETER["Longitude of natural origin",-88.3333333333333,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["Scale factor at natural origin",0.999975,
+#&gt;             SCALEUNIT["unity",1],
+#&gt;             ID["EPSG",8805]],
+#&gt;         PARAMETER["False easting",500000,
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting (X)",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219]],
+#&gt;         AXIS["northing (Y)",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219]],
+#&gt;     USAGE[
+#&gt;         SCOPE["Engineering survey, topographic mapping."],
+#&gt;         AREA["United States (USA) - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb; De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton; Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston; Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash; Wayne; White; Will; Williamson."],
+#&gt;         BBOX[37.06,-89.28,42.5,-87.02]],
+#&gt;     ID["EPSG",26771]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>SP27GTIF</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD27 / Illinois East\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"Illinois CS27 East zone\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",36.6666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-88.3333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.999975,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",500000,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting (X)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219]],\n        AXIS[\"northing (Y)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219]],\n    USAGE[\n        SCOPE[\"Engineering survey, topographic mapping.\"],\n        AREA[\"United States (USA) - Illinois - counties of Boone; Champaign; Clark; Clay; Coles; Cook; Crawford; Cumberland; De Kalb; De Witt; Douglas; Du Page; Edgar; Edwards; Effingham; Fayette; Ford; Franklin; Gallatin; Grundy; Hamilton; Hardin; Iroquois; Jasper; Jefferson; Johnson; Kane; Kankakee; Kendall; La Salle; Lake; Lawrence; Livingston; Macon; Marion; Massac; McHenry; McLean; Moultrie; Piatt; Pope; Richland; Saline; Shelby; Vermilion; Wabash; Wayne; White; Will; Williamson.\"],\n        BBOX[37.06,-89.28,42.5,-87.02]],\n    ID[\"EPSG\",26771]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>SP27GTIF</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>99</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='readGDAL-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>GDALinfo</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/cea.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: statistics not supported by this driver</span></div><div class='output co'>#&gt; rows        515 
 #&gt; columns     514 
@@ -609,7 +650,7 @@ package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op
 #&gt; driver      GTiff 
 #&gt; projection  +proj=cea +lat_ts=33.75 +lon_0=-117.333333333333 +x_0=0 +y_0=0
 #&gt; +datum=NAD27 +units=m +no_defs 
-#&gt; file        /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/cea.tif 
+#&gt; file        /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/cea.tif 
 #&gt; apparent band summary:
 #&gt;   GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1   Byte          FALSE           0         15        514
@@ -619,9 +660,9 @@ package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op
 #&gt; Metadata:
 #&gt; AREA_OR_POINT=Area </div><div class='input'><span class='op'>(</span><span class='va'>o</span> <span class='op'>&lt;-</span> <span class='fu'>GDALSpatialRef</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/cea.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "+proj=cea +lat_ts=33.75 +lon_0=-117.333333333333 +x_0=0 +y_0=0 +datum=NAD27 +units=m +no_defs"</div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='va'>o</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"unnamed\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Lambert Cylindrical Equal Area\",\n            ID[\"EPSG\",9835]],\n        PARAMETER[\"Latitude of 1st standard parallel\",33.75,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8823]],\n        PARAMETER[\"Longitude of natural origin\",-117.333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"False easting\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]]"</div><div class='input'><span class='va'>cea</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/cea.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, 
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"unnamed\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"Lambert Cylindrical Equal Area\",\n        METHOD[\"Lambert Cylindrical Equal Area\",\n            ID[\"EPSG\",9835]],\n        PARAMETER[\"Latitude of 1st standard parallel\",33.75,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8823]],\n        PARAMETER[\"Longitude of natural origin\",-117.333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"False easting\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]]"</div><div class='input'><span class='va'>cea</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/cea.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, 
 output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/cea.tif has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/cea.tif has GDAL driver GTiff 
 #&gt; and has 515 rows and 514 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>cea</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -645,13 +686,47 @@ output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/b
 #&gt;  3rd Qu.:140.0  
 #&gt;  Max.   :255.0  </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>cea</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>99</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='readGDAL-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>cea</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=cea +lat_ts=33.75 +lon_0=-117.333333333333 +x_0=0 +y_0=0
-#&gt; +datum=NAD27 +units=m +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>cea</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"unnamed\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Lambert Cylindrical Equal Area\",\n            ID[\"EPSG\",9835]],\n        PARAMETER[\"Latitude of 1st standard parallel\",33.75,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8823]],\n        PARAMETER[\"Longitude of natural origin\",-117.333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"False easting\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]]"</div><div class='input'><span class='va'>fn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/erdas_spnad83.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>
+#&gt; +datum=NAD27 +units=m +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["unnamed",
+#&gt;     BASEGEOGCRS["NAD27",
+#&gt;         DATUM["North American Datum 1927",
+#&gt;             ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4267]],
+#&gt;     CONVERSION["Lambert Cylindrical Equal Area",
+#&gt;         METHOD["Lambert Cylindrical Equal Area",
+#&gt;             ID["EPSG",9835]],
+#&gt;         PARAMETER["Latitude of 1st standard parallel",33.75,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8823]],
+#&gt;         PARAMETER["Longitude of natural origin",-117.333333333333,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["False easting",0,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["metre",1,
+#&gt;                 ID["EPSG",9001]]],
+#&gt;         AXIS["northing",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["metre",1,
+#&gt;                 ID["EPSG",9001]]]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>cea</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"unnamed\",\n    BASEGEOGCRS[\"NAD27\",\n        DATUM[\"North American Datum 1927\",\n            ELLIPSOID[\"Clarke 1866\",6378206.4,294.978698213898,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4267]],\n    CONVERSION[\"Lambert Cylindrical Equal Area\",\n        METHOD[\"Lambert Cylindrical Equal Area\",\n            ID[\"EPSG\",9835]],\n        PARAMETER[\"Latitude of 1st standard parallel\",33.75,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8823]],\n        PARAMETER[\"Longitude of natural origin\",-117.333333333333,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"False easting\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"metre\",1,\n                ID[\"EPSG\",9001]]]]"</div><div class='input'><span class='va'>fn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/erdas_spnad83.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>
 <span class='va'>erdas_spnad83</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>fn</span>, offset<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fl'>100</span><span class='op'>)</span>, region.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>400</span>, <span class='fl'>400</span><span class='op'>)</span>, 
 output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/erdas_spnad83.tif has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/erdas_spnad83.tif has GDAL driver GTiff 
 #&gt; and has 658 rows and 571 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Object of class SpatialGridDataFrame
 #&gt; Coordinates:
@@ -674,12 +749,47 @@ output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/b
 #&gt;  Mean   : 98.93  
 #&gt;  3rd Qu.:146.00  
 #&gt;  Max.   :246.00  </div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
-#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",656166.666666667,\n            LENGTHUNIT[\"feet\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"feet\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"feet\",0.304800609601219]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"feet\",0.304800609601219]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>99</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["NAD83 / Georgia East",
+#&gt;     BASEGEOGCRS["NAD83",
+#&gt;         DATUM["North American Datum 1983",
+#&gt;             ELLIPSOID["GRS 1980",6378137,298.257222101,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4269]],
+#&gt;     CONVERSION["unknown",
+#&gt;         METHOD["Transverse Mercator",
+#&gt;             ID["EPSG",9807]],
+#&gt;         PARAMETER["Latitude of natural origin",30,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8801]],
+#&gt;         PARAMETER["Longitude of natural origin",-82.1666666666667,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["Scale factor at natural origin",0.9999,
+#&gt;             SCALEUNIT["unity",1],
+#&gt;             ID["EPSG",8805]],
+#&gt;         PARAMETER["False easting",656166.666666667,
+#&gt;             LENGTHUNIT["feet",0.304800609601219],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["feet",0.304800609601219],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting (X)",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["feet",0.304800609601219]],
+#&gt;         AXIS["northing (Y)",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["feet",0.304800609601219]]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"unknown\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",656166.666666667,\n            LENGTHUNIT[\"feet\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"feet\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting (X)\",east,\n            ORDER[1],\n            LENGTHUNIT[\"feet\",0.304800609601219]],\n        AXIS[\"northing (Y)\",north,\n            ORDER[2],\n            LENGTHUNIT[\"feet\",0.304800609601219]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>99</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='readGDAL-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='va'>erdas_spnad83a</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>fn</span>, offset<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fl'>100</span><span class='op'>)</span>, region.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>400</span>, <span class='fl'>400</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/erdas_spnad83.tif has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/erdas_spnad83.tif has GDAL driver GTiff 
 #&gt; and has 658 rows and 571 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/sp/man/bbox.html'>bbox</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;       min     max
 #&gt; x   82999   98999
@@ -695,30 +805,141 @@ output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/b
 #&gt; y           1421288       40       400</div><div class='input'><span class='va'>tf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='fu'>writeGDAL</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>tf</span>, drivername<span class='op'>=</span><span class='st'>"GTiff"</span>, type<span class='op'>=</span><span class='st'>"Byte"</span>, options<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: mvFlag=NA unsuitable for type Byte</span></div><div class='input'><span class='va'>erdas_spnad83_0</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd21f46e7f has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad191acbb52b has GDAL driver GTiff 
 #&gt; and has 100 rows and 100 columns</div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_0</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
-#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_0</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",656166.666666667,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_0</span><span class='op'>)</span>
+#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["NAD83 / Georgia East",
+#&gt;     BASEGEOGCRS["NAD83",
+#&gt;         DATUM["North American Datum 1983",
+#&gt;             ELLIPSOID["GRS 1980",6378137,298.257222101004,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4269]],
+#&gt;     CONVERSION["Transverse Mercator",
+#&gt;         METHOD["Transverse Mercator",
+#&gt;             ID["EPSG",9807]],
+#&gt;         PARAMETER["Latitude of natural origin",30,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8801]],
+#&gt;         PARAMETER["Longitude of natural origin",-82.1666666666667,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["Scale factor at natural origin",0.9999,
+#&gt;             SCALEUNIT["unity",1],
+#&gt;             ID["EPSG",8805]],
+#&gt;         PARAMETER["False easting",200000,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]],
+#&gt;         AXIS["northing",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_0</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"Transverse Mercator\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",200000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_0</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Attributes: &lt; Component “proj4string”: Attributes: &lt; Component “comment”: 1 string mismatch &gt; &gt;"</div><div class='input'><span class='fu'>writeGDAL</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>tf</span>, drivername<span class='op'>=</span><span class='st'>"GTiff"</span>, type<span class='op'>=</span><span class='st'>"Byte"</span>, 
 options<span class='op'>=</span><span class='st'>"INTERLEAVE=PIXEL"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: mvFlag=NA unsuitable for type Byte</span></div><div class='input'><span class='va'>erdas_spnad83_1</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd21f46e7f has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad191acbb52b has GDAL driver GTiff 
 #&gt; and has 100 rows and 100 columns</div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_1</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
-#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_1</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",656166.666666667,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_1</span><span class='op'>)</span>
+#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["NAD83 / Georgia East",
+#&gt;     BASEGEOGCRS["NAD83",
+#&gt;         DATUM["North American Datum 1983",
+#&gt;             ELLIPSOID["GRS 1980",6378137,298.257222101004,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4269]],
+#&gt;     CONVERSION["Transverse Mercator",
+#&gt;         METHOD["Transverse Mercator",
+#&gt;             ID["EPSG",9807]],
+#&gt;         PARAMETER["Latitude of natural origin",30,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8801]],
+#&gt;         PARAMETER["Longitude of natural origin",-82.1666666666667,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["Scale factor at natural origin",0.9999,
+#&gt;             SCALEUNIT["unity",1],
+#&gt;             ID["EPSG",8805]],
+#&gt;         PARAMETER["False easting",200000,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]],
+#&gt;         AXIS["northing",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_1</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"Transverse Mercator\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",200000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Attributes: &lt; Component “proj4string”: Attributes: &lt; Component “comment”: 1 string mismatch &gt; &gt;"</div><div class='input'><span class='fu'>writeGDAL</span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>tf</span>, drivername<span class='op'>=</span><span class='st'>"GTiff"</span>, type<span class='op'>=</span><span class='st'>"Byte"</span>,
 options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"INTERLEAVE=PIXEL"</span>, <span class='st'>"COMPRESS=DEFLATE"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: mvFlag=NA unsuitable for type Byte</span></div><div class='input'><span class='va'>erdas_spnad83_2</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd21f46e7f has GDAL driver GTiff 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad191acbb52b has GDAL driver GTiff 
 #&gt; and has 100 rows and 100 columns</div><div class='input'><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_2</span>, <span class='st'>"proj4string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; CRS arguments:
+</div><div class='output co'>#&gt; Coordinate Reference System:
+#&gt; Deprecated Proj.4 representation:
 #&gt;  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
-#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_2</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"unnamed\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",656166.666666667,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"US survey foot\",0.304800609601219],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_2</span><span class='op'>)</span>
+#&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
+#&gt; WKT2 2019 representation:
+#&gt; PROJCRS["NAD83 / Georgia East",
+#&gt;     BASEGEOGCRS["NAD83",
+#&gt;         DATUM["North American Datum 1983",
+#&gt;             ELLIPSOID["GRS 1980",6378137,298.257222101004,
+#&gt;                 LENGTHUNIT["metre",1]]],
+#&gt;         PRIMEM["Greenwich",0,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433]],
+#&gt;         ID["EPSG",4269]],
+#&gt;     CONVERSION["Transverse Mercator",
+#&gt;         METHOD["Transverse Mercator",
+#&gt;             ID["EPSG",9807]],
+#&gt;         PARAMETER["Latitude of natural origin",30,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8801]],
+#&gt;         PARAMETER["Longitude of natural origin",-82.1666666666667,
+#&gt;             ANGLEUNIT["degree",0.0174532925199433],
+#&gt;             ID["EPSG",8802]],
+#&gt;         PARAMETER["Scale factor at natural origin",0.9999,
+#&gt;             SCALEUNIT["unity",1],
+#&gt;             ID["EPSG",8805]],
+#&gt;         PARAMETER["False easting",200000,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8806]],
+#&gt;         PARAMETER["False northing",0,
+#&gt;             LENGTHUNIT["metre",1],
+#&gt;             ID["EPSG",8807]]],
+#&gt;     CS[Cartesian,2],
+#&gt;         AXIS["easting",east,
+#&gt;             ORDER[1],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]],
+#&gt;         AXIS["northing",north,
+#&gt;             ORDER[2],
+#&gt;             LENGTHUNIT["US survey foot",0.304800609601219,
+#&gt;                 ID["EPSG",9003]]]] </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='projInfo.html'>new_proj_and_gdal</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/comment.html'>comment</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>erdas_spnad83_2</span>, <span class='st'>"proj4string"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "PROJCRS[\"NAD83 / Georgia East\",\n    BASEGEOGCRS[\"NAD83\",\n        DATUM[\"North American Datum 1983\",\n            ELLIPSOID[\"GRS 1980\",6378137,298.257222101004,\n                LENGTHUNIT[\"metre\",1]]],\n        PRIMEM[\"Greenwich\",0,\n            ANGLEUNIT[\"degree\",0.0174532925199433]],\n        ID[\"EPSG\",4269]],\n    CONVERSION[\"Transverse Mercator\",\n        METHOD[\"Transverse Mercator\",\n            ID[\"EPSG\",9807]],\n        PARAMETER[\"Latitude of natural origin\",30,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8801]],\n        PARAMETER[\"Longitude of natural origin\",-82.1666666666667,\n            ANGLEUNIT[\"degree\",0.0174532925199433],\n            ID[\"EPSG\",8802]],\n        PARAMETER[\"Scale factor at natural origin\",0.9999,\n            SCALEUNIT[\"unity\",1],\n            ID[\"EPSG\",8805]],\n        PARAMETER[\"False easting\",200000,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8806]],\n        PARAMETER[\"False northing\",0,\n            LENGTHUNIT[\"metre\",1],\n            ID[\"EPSG\",8807]]],\n    CS[Cartesian,2],\n        AXIS[\"easting\",east,\n            ORDER[1],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]],\n        AXIS[\"northing\",north,\n            ORDER[2],\n            LENGTHUNIT[\"US survey foot\",0.304800609601219,\n                ID[\"EPSG\",9003]]]]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/all.equal.html'>all.equal</a></span><span class='op'>(</span><span class='va'>erdas_spnad83</span>, <span class='va'>erdas_spnad83_2</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Attributes: &lt; Component “proj4string”: Attributes: &lt; Component “comment”: 1 string mismatch &gt; &gt;"</div><div class='input'>
 <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='GDALReadOnlyDataset-class.html'>GDAL.open</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"pictures/erdas_spnad83.tif"</span>, package <span class='op'>=</span> <span class='st'>"rgdal"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>
 <span class='va'>erdas_spnad83</span> <span class='op'>&lt;-</span> <span class='fu'>asSGDF_GROD</span><span class='op'>(</span><span class='va'>x</span>, output.dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
@@ -766,7 +987,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt; driver      PNG 
 #&gt; projection  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
 #&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
-#&gt; file        /tmp/RtmpxH0AFG/file572fd10e184d0 
+#&gt; file        /tmp/RtmpU1WIbP/filefad195967789 
 #&gt; apparent band summary:
 #&gt;   GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1   Byte          FALSE           0          1        100
@@ -789,7 +1010,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt; driver      PNG 
 #&gt; projection  +proj=tmerc +lat_0=30 +lon_0=-82.1666666666667 +k=0.9999 +x_0=200000
 #&gt; +y_0=0 +datum=NAD83 +units=us-ft +no_defs 
-#&gt; file        /tmp/RtmpxH0AFG/file572fd152fcb95 
+#&gt; file        /tmp/RtmpU1WIbP/filefad192f2cddae 
 #&gt; apparent band summary:
 #&gt;   GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1   Byte          FALSE           0          1        100
@@ -812,7 +1033,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 <span class='va'>tf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='fu'>writeGDAL</span><span class='op'>(</span><span class='va'>SGDF</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"red"</span>, <span class='st'>"green"</span>, <span class='st'>"blue"</span><span class='op'>)</span><span class='op'>]</span>, <span class='va'>tf</span>, type<span class='op'>=</span><span class='st'>"Byte"</span>, drivername<span class='op'>=</span><span class='st'>"PNG"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: mvFlag=NA unsuitable for type Byte</span></div><div class='input'><span class='va'>t1</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fdd8a54e1 has GDAL driver PNG 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad1973f6c1ce has GDAL driver PNG 
 #&gt; and has 10 rows and 10 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/image.html'>image</a></span><span class='op'>(</span><span class='va'>t1</span>, red<span class='op'>=</span><span class='fl'>1</span>, green<span class='op'>=</span><span class='fl'>2</span>, blue<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span>main<span class='op'>=</span><span class='st'>"output PNG RGB"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>opar</span><span class='op'>)</span>
@@ -845,7 +1066,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt;  [4] "temperature_var"    "precipitation_mean" "precipitation_var" 
 #&gt;  [7] "wnd_mean"           "rad_mean"           "eto_mean"          
 #&gt; [10] "aet_mean"           "def_mean"          </div><div class='input'><span class='va'>with</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>fn</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/test_envi_class.envi has GDAL driver ENVI 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/test_envi_class.envi has GDAL driver ENVI 
 #&gt; and has 30 rows and 30 columns
 #&gt; Input level values and names
 #&gt; 0 Unclassified
@@ -870,7 +1091,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 </div><div class='output co'>#&gt; 
 #&gt;   1   2   4   8   9  10 
 #&gt; 289 241 224  50  49  47 </div><div class='input'><span class='va'>with1</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>fn</span>, as.is<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/test_envi_class.envi has GDAL driver ENVI 
+</div><div class='output co'>#&gt; /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/test_envi_class.envi has GDAL driver ENVI 
 #&gt; and has 30 rows and 30 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>with1</span><span class='op'>$</span><span class='va'>band1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 
 #&gt;   0   1   3   7   8   9 
@@ -883,7 +1104,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 </div><div class='output co'>#&gt; <span class='warning'>Warning: colorTables valid for Byte type only in some drivers</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/readLines.html'>readLines</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>tf</span>, <span class='st'>"hdr"</span>, sep<span class='op'>=</span><span class='st'>"."</span><span class='op'>)</span><span class='op'>)</span>, <span class='st'>"\n"</span>, sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>, <span class='st'>"\n"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; ENVI
 #&gt;  description = {
-#&gt;  /tmp/RtmpxH0AFG/file572fd45a331e2}
+#&gt;  /tmp/RtmpU1WIbP/filefad1938b1cdca}
 #&gt;  samples = 30
 #&gt;  lines   = 30
 #&gt;  bands   = 1
@@ -915,7 +1136,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt;  [4] "temperature_var"    "precipitation_mean" "precipitation_var" 
 #&gt;  [7] "wnd_mean"           "rad_mean"           "eto_mean"          
 #&gt; [10] "aet_mean"           "def_mean"          </div><div class='input'><span class='va'>withN</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd45a331e2 has GDAL driver ENVI 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad1938b1cdca has GDAL driver ENVI 
 #&gt; and has 30 rows and 30 columns
 #&gt; Input level values and names
 #&gt; 0 Unclassified
@@ -936,7 +1157,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt;                  0                  0                  0                 50 
 #&gt;           eto_mean           aet_mean           def_mean 
 #&gt;                 49                 47                  0 </div><div class='input'><span class='va'>withN1</span> <span class='op'>&lt;-</span> <span class='fu'>readGDAL</span><span class='op'>(</span><span class='va'>tf</span>, as.is<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; /tmp/RtmpxH0AFG/file572fd45a331e2 has GDAL driver ENVI 
+</div><div class='output co'>#&gt; /tmp/RtmpU1WIbP/filefad1938b1cdca has GDAL driver ENVI 
 #&gt; and has 30 rows and 30 columns</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>withN1</span><span class='op'>$</span><span class='va'>band1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 
 #&gt;   0   1   3   7   8   9 
@@ -963,7 +1184,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt; driver      VRT 
 #&gt; projection  +proj=utm +zone=18 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m
 #&gt; +no_defs 
-#&gt; file        /tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/scaleoffset.vrt 
+#&gt; file        /tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/scaleoffset.vrt 
 #&gt; apparent band summary:
 #&gt;   GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1   Byte           TRUE         255          1          5
@@ -993,7 +1214,7 @@ options<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base
 #&gt; oblique.y   0 
 #&gt; driver      netCDF 
 #&gt; projection  NA 
-#&gt; file        NETCDF:"/tmp/Rtmp48CPqR/temp_libpath56868786764d9/rgdal/pictures/MR5905167_372.nc":TEMP 
+#&gt; file        NETCDF:"/tmp/Rtmpu1yWGf/temp_libpathfa5c0298539de/rgdal/pictures/MR5905167_372.nc":TEMP 
 #&gt; apparent band summary:
 #&gt;    GDType hasNoDataValue NoDataValue blockSize1 blockSize2
 #&gt; 1 Float32           TRUE       99999          1        496
