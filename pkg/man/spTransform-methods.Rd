@@ -249,6 +249,7 @@ locs.step2.cfb <- spTransform(locs.step1.cf, CRS("+init=epsg:26743"))
 coordinates(locs.step2.cfb) - ref
 all.equal(unname(coordinates(locs.step2.cfb)), ref)
 }
+\dontrun{
 # new_proj_and_gdal()
 run <- new_proj_and_gdal()
 if (run) {
@@ -279,6 +280,7 @@ all.equal(coordinates(unis_utm_33N_P4), coordinates(unis_tmerc_P4),
 all.equal(coordinates(unis_utm_33N_P4), coordinates(unis_etmerc_P4),
  tolerance=1e-9, scale=1)
 # UTM == ETMERC: PROJ4 > 4.9.2
+}
 }
 }
 
