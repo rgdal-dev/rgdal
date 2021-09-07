@@ -122,7 +122,6 @@ print(coordinates(SFpoint_NAD27), digits=12)
 print(coordinates(SFpoint_NAD83), digits=12)
 }
 }
-# meuse
 data(meuse)
 coordinates(meuse) <- c("x", "y")
 proj4string(meuse) <- CRS("+init=epsg:28992")
@@ -131,6 +130,7 @@ summary(meuse)
 meuse.utm <- spTransform(meuse, CRS("+proj=utm +zone=32 +datum=WGS84"))
 summary(meuse.utm)
 cbind(coordinates(meuse), coordinates(meuse.utm))
+\dontrun{
 # Kiritimati
 kiritimati_primary_roads <- readOGR(system.file("vectors",
  package = "rgdal")[1], "kiritimati_primary_roads")
@@ -141,7 +141,6 @@ plot(kiritimati_primary_roads, axes=TRUE)
 plot(kiritimati_primary_roads_ll, axes=TRUE, las=1)
 par(opar)
 # scot_BNG
-\dontrun{
 scot_BNG <- readOGR(system.file("vectors", package = "rgdal")[1],
    "scot_BNG")
 scot_LL <- spTransform(scot_BNG, CRS("+proj=longlat +datum=WGS84"))
@@ -227,6 +226,7 @@ bbox(spTransform(spPolygons_tr, CRS("+proj=longlat +ellps=sphere"),
  use_ob_tran=TRUE))
 }
 # added after posting by Martin Ivanov
+\dontrun{
 data(nor2k)
 summary(nor2k)
 nor2kNGO <- spTransform(nor2k, CRS("+init=epsg:4273"))
@@ -248,6 +248,7 @@ suppressWarnings(proj4string(locs.step1.cf) <- CRS(paste("+proj=lcc",
 locs.step2.cfb <- spTransform(locs.step1.cf, CRS("+init=epsg:26743"))
 coordinates(locs.step2.cfb) - ref
 all.equal(unname(coordinates(locs.step2.cfb)), ref)
+}
 # new_proj_and_gdal()
 run <- new_proj_and_gdal()
 if (run) {
