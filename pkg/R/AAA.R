@@ -91,7 +91,7 @@ local_RGDAL_Init <- function() .Call('RGDAL_Init', PACKAGE="rgdal")
     assign("has_proj_def.dat", pdd, envir=.RGDAL_CACHE)
   }
 
-  Smess <- paste('rgdal: version: ',
+  Smess <- paste('Please note that rgdal will be retired by the end of 2023,\nplan transition to sf/stars/terra functions using GDAL and PROJ\nat your earliest convenience.\n\n', 'rgdal: version: ',
     utils::packageDescription("rgdal")$Version,
     ', (SVN revision ', svn_version, ')\n',
     'Geospatial Data Abstraction Library ',
