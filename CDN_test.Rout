@@ -1,0 +1,228 @@
+
+> td <- tempfile()
+
+> dir.create(td)
+
+> Sys.setenv(PROJ_USER_WRITABLE_DIRECTORY = td)
+
+> library(rgdal)
+Loading required package: sp
+Please note that rgdal will be retired by the end of 2023,
+plan transition to sf/stars/terra functions using GDAL and PROJ
+at your earliest convenience.
+
+rgdal: version: 1.5-25, (SVN revision 1143)
+Geospatial Data Abstraction Library extensions to R successfully loaded
+Loaded GDAL runtime: GDAL 3.3.2, released 2021/09/01
+Path to GDAL shared files: /usr/local/share/gdal
+GDAL binary built with GEOS: TRUE 
+Loaded PROJ runtime: Rel. 8.1.1, September 1st, 2021, [PJ_VERSION: 811]
+Path to PROJ shared files: /tmp/RtmpYCKzJx/fileea6d3b84392a:/usr/local/share/proj:/usr/local/share/proj
+PROJ CDN enabled: FALSE
+Linking to sp version:1.4-6
+To mute warnings of possible GDAL/OSR exportToProj4() degradation,
+use options("rgdal_show_exportToProj4_warnings"="none") before loading sp or rgdal.
+
+> b_pump <- readOGR(system.file("vectors/b_pump.gpkg", 
++     package = "rgdal"))
+OGR data source with driver: GPKG 
+Source: "/home/rsb/lib/r_libs/rgdal/vectors/b_pump.gpkg", layer: "b_pump"
+with 1 features
+It has 1 fields
+Integer64 fields read as strings:  cat 
+
+> WKT <- wkt(b_pump)
+
+> cat(WKT, "\n")
+PROJCRS["Transverse_Mercator",
+    BASEGEOGCRS["GCS_OSGB 1936",
+        DATUM["Ordnance Survey of Great Britain 1936",
+            ELLIPSOID["Airy 1830",6377563.396,299.3249646,
+                LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["Degree",0.0174532925199433]],
+        ID["EPSG",4277]],
+    CONVERSION["unnamed",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",49,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",-2,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.999601,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",400000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",-100000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["easting",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]],
+        AXIS["northing",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]]] 
+
+> if (is.projected(b_pump)) {
++     o <- project(t(unclass(bbox(b_pump))), wkt(b_pump), inv = TRUE)
++ } else {
++     o <- t(unclass(bbox(b_pump)))
++ }
+
+> (aoi <- c(t(o + c(-0.1, +0.1))))
+[1] -0.23510705 51.41279260 -0.03510705 51.61279260
+
+> is_proj_CDN_enabled()
+[1] FALSE
+
+> enable_proj_CDN()
+[1] "Using: /tmp/RtmpYCKzJx/fileea6d3b84392a"
+
+> is_proj_CDN_enabled()
+[1] TRUE
+
+> (shpr <- get_proj_search_paths())
+[1] "/tmp/RtmpYCKzJx/fileea6d3b84392a" "/usr/local/share/proj"           
+[3] "/usr/local/share/proj"           
+
+> shpr[1]
+[1] "/tmp/RtmpYCKzJx/fileea6d3b84392a"
+
+> try(file.size(file.path(shpr[1], "cache.db")))
+[1] NA
+
+> list_coordOps(WKT, "OGC:CRS84", area_of_interest = aoi)
+Candidate coordinate operations found:  5 
+Search specification: Area of interest:  -0.235107046388033, 51.4127925984147, -0.0351070463880326, 51.6127925984147 
+Strict containment:  FALSE 
+Visualization order:  TRUE 
+Source: PROJCRS["Transverse_Mercator", BASEGEOGCRS["GCS_OSGB 1936",
+        DATUM["Ordnance Survey of Great Britain 1936",
+        ELLIPSOID["Airy 1830", 6377563.396, 299.3249646,
+        LENGTHUNIT["metre", 1]]], PRIMEM["Greenwich", 0,
+        ANGLEUNIT["Degree", 0.0174532925199433]], ID["EPSG",
+        4277]], CONVERSION["unnamed", METHOD["Transverse
+        Mercator", ID["EPSG", 9807]], PARAMETER["Latitude of
+        natural origin", 49, ANGLEUNIT["degree",
+        0.0174532925199433], ID["EPSG", 8801]],
+        PARAMETER["Longitude of natural origin", -2,
+        ANGLEUNIT["degree", 0.0174532925199433], ID["EPSG",
+        8802]], PARAMETER["Scale factor at natural origin",
+        0.999601, SCALEUNIT["unity", 1], ID["EPSG", 8805]],
+        PARAMETER["False easting", 400000, LENGTHUNIT["metre",
+        1], ID["EPSG", 8806]], PARAMETER["False northing",
+        -100000, LENGTHUNIT["metre", 1], ID["EPSG", 8807]]],
+        CS[Cartesian, 2], AXIS["easting", east, ORDER[1],
+        LENGTHUNIT["metre", 1, ID["EPSG", 9001]]],
+        AXIS["northing", north, ORDER[2], LENGTHUNIT["metre",
+        1, ID["EPSG", 9001]]]]
+Target: OGC:CRS84 
+Best instantiable operation has accuracy: 1 m
+Description: Inverse of unnamed + OSGB36 to WGS 84 (9) + axis order change
+             (2D)
+Definition:  +proj=pipeline +step +inv +proj=tmerc +lat_0=49 +lon_0=-2
+             +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy
+             +step +proj=hgridshift
+             +grids=uk_os_OSTN15_NTv2_OSGBtoETRS.tif +step
+             +proj=unitconvert +xy_in=rad +xy_out=deg
+
+> is1m <- spTransform(b_pump, CRS(SRS_string = "OGC:CRS84"))
+
+> get_last_coordOp()
+[1] "+proj=pipeline +step +inv +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy +step +proj=hgridshift +grids=uk_os_OSTN15_NTv2_OSGBtoETRS.tif +step +proj=unitconvert +xy_in=rad +xy_out=deg"
+
+> try(file.size(file.path(shpr[1], "cache.db")))
+[1] 319488
+
+> library(RSQLite)
+
+> db <- dbConnect(SQLite(), dbname = file.path(shpr[1], 
++     "cache.db"))
+
+> dbListTables(db)
+[1] "chunk_data"                 "chunks"                    
+[3] "downloaded_file_properties" "linked_chunks"             
+[5] "linked_chunks_head_tail"    "properties"                
+[7] "sqlite_sequence"           
+
+> dbReadTable(db, "chunks")
+   id                                                   url  offset data_id
+1   1 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif       0       1
+2   2 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2621440       2
+3   3 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2637824       3
+4   4 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2654208       4
+5   5 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2670592       5
+6   6 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2686976       6
+7   7 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2703360       7
+8   8 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2719744       8
+9   9 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2736128       9
+10 10 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2752512      10
+11 11 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2768896      11
+12 12 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2785280      12
+13 13 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2801664      13
+14 14 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2818048      14
+15 15 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2834432      15
+16 16 https://cdn.proj.org/uk_os_OSTN15_NTv2_OSGBtoETRS.tif 2850816      16
+   data_size
+1      16384
+2      16384
+3      16384
+4      16384
+5      16384
+6      16384
+7      16384
+8      16384
+9      16384
+10     16384
+11     16384
+12     16384
+13     16384
+14     16384
+15     16384
+16     16384
+
+> dbDisconnect(db)
+
+> disable_proj_CDN()
+
+> is_proj_CDN_enabled()
+[1] FALSE
+
+> sessionInfo()
+R version 4.1.1 (2021-08-10)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Fedora 34 (Workstation Edition)
+
+Matrix products: default
+BLAS:   /home/rsb/topics/R/R411-share/lib64/R/lib/libRblas.so
+LAPACK: /home/rsb/topics/R/R411-share/lib64/R/lib/libRlapack.so
+
+locale:
+ [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+ [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+ [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] RSQLite_2.2.8 rgdal_1.5-25  sp_1.4-6     
+
+loaded via a namespace (and not attached):
+ [1] bit_4.0.4       compiler_4.1.1  fastmap_1.1.0   DBI_1.1.1      
+ [5] memoise_2.0.0   Rcpp_1.0.7      bit64_4.0.5     vctrs_0.3.8    
+ [9] cachem_1.0.6    grid_4.1.1      blob_1.2.2      pkgconfig_2.0.3
+[13] rlang_0.4.11    lattice_0.20-44
+Warning message:
+In OGRSpatialRef(dsn, layer, morphFromESRI = morphFromESRI, dumpSRS = dumpSRS,  :
+  Discarded datum Ordnance_Survey_of_Great_Britain_1936 in Proj4 definition: +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs
