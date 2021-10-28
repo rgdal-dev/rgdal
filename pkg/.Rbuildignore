@@ -3,8 +3,3 @@ svn2cl.*
 _pkgdown.yml
 ^.*\.Rproj$
 ^\.Rproj\.user$
-install_time_patches
-^install_time_patches/.*[.]diff$
-^src/.*[.]o$
-^src/.*[.]dll$
-^windows$
