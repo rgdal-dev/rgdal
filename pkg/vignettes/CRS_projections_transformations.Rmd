@@ -115,7 +115,7 @@ dbListTables(db)
 ```
 
 
-PROJ 7 (2020) reconfigured the transformation grids, now using the Geodetic TIFF Grid (GTG) format, and created pathways for on-demand download (typically using a content download netwoek (CDN) over CURL) of chunks of such grids to a local user-writable cache held in another SQLite database. After little change from the late 1990s to early 2018, PROJ.4 has incremented its major version number three times in three years, and by 2021 (PROJ 8), the pre-existing application programming interface will be history. In addition, GDAL 3 (2019) has tightened its links with PROJ >= 6, and `exportToProj4()` now says: 
+PROJ 7 (2020) reconfigured the transformation grids, now using the Geodetic TIFF Grid (GTG) format, and created pathways for on-demand download (typically using a content download network (CDN) over CURL) of chunks of such grids to a local user-writable cache held in another SQLite database. After little change from the late 1990s to early 2018, PROJ.4 has incremented its major version number three times in three years, and by 2021 (PROJ 8), the pre-existing application programming interface will be history. In addition, GDAL 3 (2019) has tightened its links with PROJ >= 6, and `exportToProj4()` now says: 
 
 > "Use of this function is discouraged. Its behavior in GDAL >= 3 / PROJ >= 6 is significantly different from earlier versions. In particular +datum will only encode WGS84, NAD27 and NAD83, and +towgs84/+nadgrids terms will be missing most of the time. PROJ strings to encode CRS should be considered as a a legacy solution. Using a AUTHORITY:CODE or WKT representation is the recommended way" (https://gdal.org/api/ogrspatialref.html).
 
