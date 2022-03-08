@@ -2,6 +2,8 @@
 
 # Version 1.5-29 (development, rev. 1159-1161)
 
+* also convert BOUNDCRS to PROJCRS by default in OGRSpatialRef()
+
 * test for chunks table in cache.db in vignette
 
 * quietening tests only differing by `proj.db` version.
