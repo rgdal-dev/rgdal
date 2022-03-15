@@ -40,7 +40,8 @@ getRasterData(dataset, band = NULL, offset = c(0, 0),
 getRasterTable(dataset, band = NULL, offset = c(0, 0), 
   region.dim = dim(dataset))
 
-getProjectionRef(dataset, OVERRIDE_PROJ_DATUM_WITH_TOWGS84 = NULL, enforce_xy = NULL, get_source_if_boundcrs=TRUE)
+getProjectionRef(dataset, OVERRIDE_PROJ_DATUM_WITH_TOWGS84 = NULL,
+ enforce_xy = NULL, get_source_if_boundcrs=TRUE)
 
 getRasterBand(dataset, band = 1)
 
