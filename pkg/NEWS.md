@@ -2,7 +2,9 @@
 
 # Version 1.5-30 (development, rev. 1166-)
 
-* Update src/Makevars.win to GDAL 3.4.1 for R < 4.2
+* restore PROJ path assignment for PROJ >= 6 not using PROJ_LIB (was used for PROJ 6 but not > 6) https://github.com/rsbivand/rgrass/issues/52
+
+* Update src/Makevars.win to GDAL 3.4.1 for R < 4.2 https://github.com/r-spatial/sf/pull/1919
 
 # Version 1.5-29 (2022-03-15, rev. 1159-1165)
 
