@@ -49,11 +49,11 @@ load_stuff <- function() {
   if (!is.null(rgdal_show_exportToProj4_warnings)) {
     if (!(rgdal_show_exportToProj4_warnings %in% c("all", "thin", "none"))) {
 # CURRENT DEFAULT: "all"
-      rgdal_show_exportToProj4_warnings <- "all"
+      rgdal_show_exportToProj4_warnings <- "none"
     }
   } else {
 # CURRENT DEFAULT: "all"
-    rgdal_show_exportToProj4_warnings <- "all"
+    rgdal_show_exportToProj4_warnings <- "none"
   }
   if (rgdal_show_exportToProj4_warnings == "all") {
     assign("rgdal_show_exportToProj4_warnings", TRUE, envir=.RGDAL_CACHE)
