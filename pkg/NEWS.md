@@ -2,11 +2,15 @@
 
 # Version 1.6-1 (development, rev. 1177-)
 
+* handle -Wstrict-prototypes `int main()` to `int main(void)` in `configure.ac`
+
+* update `src/Makevars.ucrt` to upgraded MXE geospatial libraries
+
 * address https://github.com/r-spatial/sf/pull/2009
 
 * set PROJ4 warnings default to "none"
 
-* fix -Wstrict-prototypes warnings
+* fix -Wstrict-prototypes warnings in code
 
 # Version 1.5-32 (2022-05-09, rev. 1173-1176)
 
