@@ -474,6 +474,7 @@ readOGR <- function(dsn, layer, verbose=TRUE, p4s=NULL,
 }
 
 showWKT <- function(p4s, file=NULL, morphToESRI=FALSE, enforce_xy=NULL) {
+  .Deprecated("", package="rgdal", msg="OGR support is provided by the sf and terra packages among others")
 
 	if (!is.character(p4s)) stop("invalid p4s object")
         stopifnot(length(p4s) == 1)
@@ -516,6 +517,7 @@ showP4 <- function(wkt, morphFromESRI=FALSE, enforce_xy=NULL) {
 
 
 showEPSG <- function(p4s, enforce_xy=NULL) {
+  .Deprecated("", package="rgdal", msg="OGR support is provided by the sf and terra packages among others")
 
 	if (!is.character(p4s)) stop("invalid p4s object")
         stopifnot(length(p4s) == 1L)

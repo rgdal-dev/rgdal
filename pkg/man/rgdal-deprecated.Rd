@@ -16,6 +16,13 @@
 \alias{OGRSpatialRef}
 \alias{ogrListLayers}
 \alias{writeOGR}
+\alias{CRSargs}
+\alias{showWKT}
+\alias{showEPSG}
+\alias{getCPLConfigOption}
+\alias{setCPLConfigOption}
+\alias{GDALcall}
+\alias{rawTransform}
 \title{Deprecated functions and methods}
 \description{Cumulative deprecated functions and methods from rgdal prior to package retirement/archiving during 2023.}
 \usage{
@@ -61,6 +68,13 @@ writeOGR(obj, dsn, layer, driver, dataset_options = NULL,
  layer_options=NULL, verbose = FALSE, check_exists=NULL,
  overwrite_layer=FALSE, delete_dsn=FALSE, morphToESRI=NULL,
  encoding=NULL, shp_edge_case_fix=FALSE, dumpSRS = FALSE)
+checkCRSArgs(uprojargs)
+showWKT(p4s, file = NULL, morphToESRI = FALSE, enforce_xy = NULL)
+showEPSG(p4s, enforce_xy = NULL)
+getCPLConfigOption(ConfigOption)
+setCPLConfigOption(ConfigOption, value)
+GDALcall(object, option, ...)
+rawTransform(projfrom, projto, n, x, y, z=NULL, wkt=FALSE)
 }
 \arguments{
   \item{xy}{ 2-column matrix of coordinates }
@@ -152,6 +166,18 @@ Attribute Table or NULL for each band}
   \item{delete_dsn}{default FALSE, may be set to TRUE if \code{overwrite_layer} reports that the data source cannot be updated; this will delete data and must be used with extreme caution, its behaviour varies between drivers, and accommodates changes that may appear in GDAL 1.8}
   \item{morphToESRI}{default NULL, in which case set TRUE if driver is \dQuote{ESRI Shapefile} or FALSE otherwise; may be used to override this default}
   \item{shp_edge_case_fix}{default FALSE, if TRUE, attempt to work around MULTIPOLYGON to POLYGON degradation in ESRI Shapefile output with two touching exterior rings in a single feature (not yet implemented).}
+  \item{uprojargs}{character string PROJ.4 projection arguments}
+  \item{file}{if not NULL, a file name to which the output Well-Known Text representation should be written}
+  \item{ConfigOption}{CPL configure option documented in \url{https://trac.osgeo.org/gdal/wiki/ConfigOptions} and elsewhere in GDAL source code}
+  \item{value}{a string value to set a CPL option; NULL is used to unset the CPL option}
+  \item{object}{GDALTransientDataset (option = 'SetGeoTransform', 'SetProject') or GDALRasterBand (the other options)}
+  \item{option}{character. One of 'SetGeoTransform', 'SetProject', 'SetNoDataValue', 'SetStatistics', 'SetRasterColorTable' or 'SetCategoryNames') }
+  \item{projfrom}{character. PROJ.4 coordinate reference system (CRS) description}
+  \item{projto}{character. PROJ.4 CRS description}
+  \item{n}{number of coordinates}
+  \item{y}{y coordinates}
+  \item{z}{z coordinates}
+  \item{wkt}{default FALSE, if TRUE, the caller determines that projfrom and projto are wkt and that new_proj_and_gdal() returns TRUE to avoid multiple warnings when the function is called repetitively}
 }
 \examples{
 data(state)
@@ -621,5 +647,27 @@ summary(scot_BNG3)
 if(nchar(Sys.getenv("OSGEO4W_ROOT")) > 0) {
     setwd(OLDPWD)
 }
+set_thin_PROJ6_warnings(TRUE)
+CRSargs(CRS("+proj=longlat"))
+try(CRS("+proj=longlat"))
+CRSargs(CRS("+proj=longlat +datum=NAD27"))
+CRSargs(CRS("+init=epsg:4267"))
+CRSargs(CRS("+init=epsg:26978"))
+CRSargs(CRS(paste("+proj=stere +lat_0=52.15616055555555", 
+"+lon_0=5.38763888888889 +k=0.999908 +x_0=155000 +y_0=463000 +ellps=bessel", 
+"+towgs84=565.237,50.0087,465.658,-0.406857,0.350733,-1.87035,4.0812", 
+"+units=m")))
+# see http://trac.osgeo.org/gdal/ticket/1987
+CRSargs(CRS("+init=epsg:28992"))
+crs <- CRS("+init=epsg:28992")
+CRSargs(CRS(CRSargs(crs)))
+set_thin_PROJ6_warnings(TRUE)
+cities <- readOGR(system.file("vectors", package = "rgdal")[1], "cities")
+readLines(system.file("vectors/cities.prj", package = "rgdal")[1])
+showWKT(proj4string(cities))
+showWKT("+init=epsg:28992")
+showP4(showWKT("+init=epsg:28992"))
+showEPSG("+proj=utm +zone=30")
+showEPSG("+proj=longlat +ellps=WGS84")
 }
 

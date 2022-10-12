@@ -51,7 +51,7 @@ export(
  EPSG_version # 
 )
 export(
- CRSargs, # geonetwork inlabru inlmisc intamap plotKML rosm RSurvey rtop TOC tripEstimation ursa
+ CRSargs, # geonetwork inlabru inlmisc intamap plotKML rosm RSurvey rtop TOC tripEstimation ursa deprecated 2022-10-12
  checkCRSArgs, # RSurvey sp
  checkCRSArgs_ng, # sp
  compare_CRS # raster
@@ -119,8 +119,8 @@ export(
  create2GDAL # deprecated 2022-10-11
 )
 export(
- showWKT, # geotopbricks quickmapr rpostgis ursa
- showEPSG, # postGIStools rpostgis
+ showWKT, # geotopbricks quickmapr rpostgis ursa deprecated 2022-10-12
+ showEPSG, # postGIStools rpostgis deprecated 2022-10-12
  showP4, # RSurvey ursa
  showSRID, # inlabru
  list_coordOps, # 
@@ -153,10 +153,10 @@ export(
  llgridlines # 
 )
 export(
- GDALcall # FIESTAutils raster ursa
+ GDALcall # FIESTAutils raster ursa deprecated 2022-10-12
 )
 export(
- rawTransform # mapmisc raster
+ rawTransform # mapmisc raster deprecated 2022-10-12
 )
 export(
  is_proj_CDN_enabled, # 
@@ -182,8 +182,8 @@ export(
 )
 
 export(
- getCPLConfigOption, # 
- setCPLConfigOption # ExposR HurreconR ursa
+ getCPLConfigOption, # deprecated 2022-10-12
+ setCPLConfigOption # ExposR HurreconR ursa deprecated 2022-10-12
 )
 
 export(
