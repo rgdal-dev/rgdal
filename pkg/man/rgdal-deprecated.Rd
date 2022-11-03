@@ -298,6 +298,7 @@ try(ll2 <- project(xy0, "+proj=moll", inv=TRUE, legacy=FALSE, allowNAs_if_not_le
 if (exists("ll0")) all.equal(ll0, ll2)
 }
 if (exists("ll0")) all.equal(ll0, ll)
+\dontrun{
 set_thin_PROJ6_warnings(TRUE)
 library(grid)
 GDALinfo(system.file("external/test.ag", package="sp")[1])
@@ -430,12 +431,10 @@ writeGDAL(t0, tf, type="Byte", colorTable=list(CT), catNames=list(cN),
  mvFlag=3L)
 attr(GDALinfo(tf, returnStats=FALSE, returnCategoryNames=TRUE),
  "CATlist")[[1]]
-\dontrun{
 ds <- GDAL.open(tf)
 displayDataset(ds, reset.par=FALSE)
 t(col2rgb(getColorTable(ds)[1:4]))
 GDAL.close(ds)
-}
 fn <- system.file("pictures/test_envi_class.envi", package = "rgdal")[1]
 Gi <- GDALinfo(fn, returnColorTable=TRUE, returnCategoryNames=TRUE)
 CT <- attr(Gi, "ColorTable")[[1]]
@@ -476,6 +475,8 @@ if (file.exists(fl)) {
   flstr <- paste0("NETCDF:\"", fl, "\":TEMP")
   if ("netCDF" \%in\% gdalDrivers()$name) GDALinfo(flstr)
 }
+}
+
 set_thin_PROJ6_warnings(TRUE)
 ogrDrivers()
 dsn <- system.file("vectors", package = "rgdal")[1]
