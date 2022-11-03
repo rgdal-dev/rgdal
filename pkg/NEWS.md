@@ -1,6 +1,8 @@
 # Please note that **rgdal** will be retired by the end of 2023, plan transition to sf/stars/terra functions using GDAL and PROJ at your earliest convenience.
 
-# Version 1.6-1 (development, rev. 1177-)
+# Version 1.6-2 (development, rev. 1177-)
+
+* deprecation of `project()`, `CRSargs()`, `asSGDF_GROD()`, `readGDAL()`, `writeGDAL()`, `create2GDAL()`, `showWKT()`, `showEPSG()`, `readOGR()`, `ogrFIDs()`, `ogrInfo()`, `ogrDrivers()`, `writeOGR()`, `ogrListLayers()`, `GDALinfo()`, `print.GDALobj()`, `GDALcall()`, `rawTransform()`, `OGRSpatialRef()` in favour of functions and methods ib **sf** and **terra**. 
 
 * handle -Wstrict-prototypes `int main()` to `int main(void)` in `configure.ac`
 

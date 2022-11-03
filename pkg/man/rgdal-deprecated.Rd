@@ -475,7 +475,6 @@ if (file.exists(fl)) {
   flstr <- paste0("NETCDF:\"", fl, "\":TEMP")
   if ("netCDF" \%in\% gdalDrivers()$name) GDALinfo(flstr)
 }
-}
 
 set_thin_PROJ6_warnings(TRUE)
 ogrDrivers()
@@ -604,6 +603,8 @@ if ("GeoJSON" \%in\% ogrDrivers()$name) {
   print(in2_comms)
   print(isTRUE(all.equal(in1_comms, in2_comms)))
 }
+}
+
 \dontrun{if ("GML" \%in\% ogrDrivers()$name) {
   airports <- try(readOGR(system.file("vectors/airports.gml",
     package = "rgdal")[1], "airports"))
@@ -612,6 +613,15 @@ if ("GeoJSON" \%in\% ogrDrivers()$name) {
     cities3 <- readOGR(paste(td, "cities.gml", sep="/"), "cities")
   }
 }}
+if (!exists("td")) {
+  td <- file.path(tempdir(), "rgdal_examples"); dir.create(td)
+# BDR 2016-12-15 (MapInfo driver fails writing to directory with ".")
+  if(nchar(Sys.getenv("OSGEO4W_ROOT")) > 0) {
+    OLDPWD <- getwd()
+    setwd(td)
+    td <- "."
+  }
+}
 # The GML driver does not support coordinate reference systems
 if ("KML" \%in\% ogrDrivers()$name) {
   data(meuse)
