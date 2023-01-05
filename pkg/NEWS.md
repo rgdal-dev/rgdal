@@ -2,6 +2,8 @@
 
 # Version 1.6-4 (development, rev. 1188-)
 
+* Update GridsDatums data set
+
 * Update `makevars.ucrt` to Rtools 4.3
 
 # Version 1.6-3 (2022-12-14, rev. 1184-1187)
