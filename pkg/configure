@@ -2451,6 +2451,19 @@ printf "%s\n" "no" >&6; }
   fi
 fi
 
+{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking GDAL version != 3.6.0" >&5
+printf %s "checking GDAL version != 3.6.0... " >&6; }
+if test ${GDAL_MAJOR} = 3 && test ${GDAL_MINOR} = 6 && test ${GDAL_PATCH} = 0 ; then
+  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+printf "%s\n" "no" >&6; }
+  as_fn_error $? "GDAL 3.6.0 was retracted, use a subsequent version" "$LINENO" 5
+else
+  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+printf "%s\n" "yes" >&6; }
+fi
+
+
+
 { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking GDAL version >= 1.11.4" >&5
 printf %s "checking GDAL version >= 1.11.4... " >&6; }
 if test ${GDAL_MAJOR} -gt 1 ; then
