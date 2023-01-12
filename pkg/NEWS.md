@@ -4,6 +4,8 @@
 
 * Update GridsDatums data set
 
+* Warn if retracted GDAL 3.6.0 is being used
+
 * Update `makevars.ucrt` to Rtools 4.3
 
 # Version 1.6-3 (2022-12-14, rev. 1184-1187)
