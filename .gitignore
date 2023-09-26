@@ -1,1 +1,4 @@
 .Rproj.user
+config.log
+config.status
+src/Makevars
