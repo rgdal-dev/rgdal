@@ -1,7 +1,0 @@
-.project
-.cdtproject
-*.so
-*.o
-config.status
-config.log
-Makevars
